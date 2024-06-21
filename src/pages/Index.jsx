@@ -1,9 +1,49 @@
-import { Container, VStack, Heading, Text, Button, Box, Image, Flex } from "@chakra-ui/react";
-import { FaRocket, FaLightbulb, FaHandsHelping } from "react-icons/fa";
+import { useState } from "react";
+import { Container, VStack, Heading, Text, Button, Box, Flex, IconButton, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton } from "@chakra-ui/react";
+import { FaRocket, FaLightbulb, FaHandsHelping, FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Index = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
   return (
     <Container centerContent maxW="container.xl" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" p={4}>
+      <IconButton
+        icon={<FaBars />}
+        size="lg"
+        position="absolute"
+        top={4}
+        right={4}
+        onClick={toggleDrawer}
+        colorScheme="teal"
+        aria-label="Open Menu"
+      />
+      <Drawer isOpen={isDrawerOpen} placement="right" onClose={toggleDrawer}>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Navigation</DrawerHeader>
+          <DrawerBody>
+            <VStack spacing={4}>
+              <Button as={Link} to="/" width="100%" onClick={toggleDrawer}>
+                Landing Page
+              </Button>
+              <Button as={Link} to="/success-stories" width="100%" onClick={toggleDrawer}>
+                Success Stories
+              </Button>
+              <Button as={Link} to="/our-service" width="100%" onClick={toggleDrawer}>
+                Our Service
+              </Button>
+              <Button as={Link} to="/contact" width="100%" onClick={toggleDrawer}>
+                Contact
+              </Button>
+            </VStack>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
       <VStack spacing={8} textAlign="center">
         <Heading as="h1" size="2xl" color="brand.700">
           Welcome to AI Consulting Agency
