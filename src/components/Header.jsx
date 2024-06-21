@@ -3,7 +3,7 @@ import './Header.css';
 
 const Header = () => (
   <header>
-    <div className="logo">BRAINPOOL.AI</div>
+    <div className="logo">Straub Klobe Leong Consulting</div>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>

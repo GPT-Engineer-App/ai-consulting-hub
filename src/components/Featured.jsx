@@ -3,7 +3,7 @@ import './Featured.css';
 
 const Featured = () => (
   <section className="featured">
-    <h2>As featured in</h2>
+    <h2>Featured in</h2>
     <div className="logos">
       <img src="forbes-logo.png" alt="Forbes" />
       <img src="bloomberg-logo.png" alt="Bloomberg" />

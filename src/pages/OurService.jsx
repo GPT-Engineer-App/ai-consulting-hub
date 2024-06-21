@@ -5,7 +5,7 @@ const OurService = () => {
     <Container centerContent maxW="container.xl" p={4}>
       <VStack spacing={8} textAlign="center">
         <Heading as="h1" size="2xl" color="brand.700">
-          Our Service
+          Our Services
         </Heading>
         <Text fontSize="xl" color="gray.600">
           Learn more about the services we offer.

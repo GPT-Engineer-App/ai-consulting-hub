@@ -5,10 +5,10 @@ const Contact = () => {
     <Container centerContent maxW="container.xl" p={4}>
       <VStack spacing={8} textAlign="center">
         <Heading as="h1" size="2xl" color="brand.700">
-          Contact Us
+          Contact Brainpool.AI
         </Heading>
         <Text fontSize="xl" color="gray.600">
-          Get in touch with us for more information.
+          Get in touch with Brainpool.AI for more information.
         </Text>
       </VStack>
       <Box mt={10} width="100%">
@@ -25,7 +25,7 @@ const Contact = () => {
           <Textarea placeholder="Your Message" />
         </FormControl>
         <Button colorScheme="teal" size="lg" mt={4}>
-          Send Message
+          Send Message to Brainpool.AI
         </Button>
       </Box>
     </Container>
