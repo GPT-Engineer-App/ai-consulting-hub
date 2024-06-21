@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, VStack, Heading, Text, Button, Box, Flex, IconButton, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton } from "@chakra-ui/react";
-import { FaRocket, FaLightbulb, FaHandsHelping, FaBars } from "react-icons/fa";
+import { FaRocket, FaLightbulb, FaHandsHelping, FaBars, FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -9,8 +9,9 @@ const Index = () => {
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
+
   return (
-    <Container centerContent maxW="container.xl" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" p={4}>
+    <Container centerContent maxW="container.xl" p={4}>
       <IconButton
         icon={<FaBars />}
         size="lg"
@@ -29,7 +30,7 @@ const Index = () => {
           <DrawerBody>
             <VStack spacing={4}>
               <Button as={Link} to="/" width="100%" onClick={toggleDrawer}>
-                Landing Page
+                Home
               </Button>
               <Button as={Link} to="/success-stories" width="100%" onClick={toggleDrawer}>
                 Success Stories
@@ -44,7 +45,7 @@ const Index = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-      <VStack spacing={8} textAlign="center">
+      <VStack spacing={8} textAlign="center" mt={10}>
         <Heading as="h1" size="2xl" color="brand.700">
           Welcome to AI Consulting Agency
         </Heading>
@@ -55,7 +56,7 @@ const Index = () => {
           Get Started
         </Button>
       </VStack>
-      <Box mt={10} width="100%">
+      <Box mt={20} width="100%">
         <Flex justify="space-around" wrap="wrap" spacing={10}>
           <Box textAlign="center" p={5} shadow="md" borderWidth="1px" borderRadius="md">
             <FaLightbulb size="3em" color="teal" />
@@ -76,6 +77,42 @@ const Index = () => {
             </Text>
           </Box>
         </Flex>
+      </Box>
+      <Box mt={20} width="100%">
+        <Heading as="h2" size="xl" textAlign="center" color="brand.700" mb={10}>
+          Success Stories
+        </Heading>
+        <Flex justify="space-around" wrap="wrap" spacing={10}>
+          <Box textAlign="center" p={5} shadow="md" borderWidth="1px" borderRadius="md">
+            <Heading as="h3" size="lg" mt={4}>
+              Company A
+            </Heading>
+            <Text mt={2} color="gray.500">
+              Our AI solution increased their efficiency by 30%.
+            </Text>
+          </Box>
+          <Box textAlign="center" p={5} shadow="md" borderWidth="1px" borderRadius="md">
+            <Heading as="h3" size="lg" mt={4}>
+              Company B
+            </Heading>
+            <Text mt={2} color="gray.500">
+              They saw a 20% increase in sales after implementing our AI tools.
+            </Text>
+          </Box>
+        </Flex>
+      </Box>
+      <Box mt={20} width="100%">
+        <Heading as="h2" size="xl" textAlign="center" color="brand.700" mb={10}>
+          Contact Us
+        </Heading>
+        <Box textAlign="center" p={5} shadow="md" borderWidth="1px" borderRadius="md">
+          <Text fontSize="xl" color="gray.600">
+            Get in touch with us for more information.
+          </Text>
+          <Button as={Link} to="/contact" colorScheme="teal" size="lg" mt={4}>
+            Contact Us
+          </Button>
+        </Box>
       </Box>
     </Container>
   );
