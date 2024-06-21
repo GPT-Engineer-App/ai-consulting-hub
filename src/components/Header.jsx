@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import Banner from './Banner.jsx';
 
 const Header = () => (
   <header>
@@ -13,6 +14,7 @@ const Header = () => (
         <li><a href="#contact">Contact Us</a></li>
       </ul>
     </nav>
+    <Banner />
   </header>
 );
 
