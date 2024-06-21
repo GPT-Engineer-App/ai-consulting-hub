@@ -1,0 +1,15 @@
+.banner {
+  text-align: center;
+  padding: 100px 20px;
+  background: #f4f4f9;
+}
+
+.banner h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}

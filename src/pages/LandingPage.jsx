@@ -1,20 +1,13 @@
 import { Container, VStack, Heading, Text, Button, Box, Flex } from "@chakra-ui/react";
 import { FaRocket, FaLightbulb, FaHandsHelping } from "react-icons/fa";
+import Banner from "../components/Banner.jsx";
+import Featured from "../components/Featured.jsx";
 
 const LandingPage = () => {
   return (
-    <Container centerContent maxW="container.xl" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" p={4}>
-      <VStack spacing={8} textAlign="center">
-        <Heading as="h1" size="2xl" color="brand.700">
-          Welcome to AI Consulting Agency
-        </Heading>
-        <Text fontSize="xl" color="gray.600">
-          Empowering your business with cutting-edge AI solutions.
-        </Text>
-        <Button colorScheme="teal" size="lg" rightIcon={<FaRocket />}>
-          Get Started
-        </Button>
-      </VStack>
+    <Container centerContent maxW="container.xl" p={4}>
+      <Banner />
+      <Featured />
       <Box mt={10} width="100%">
         <Flex justify="space-around" wrap="wrap" spacing={10}>
           <Box textAlign="center" p={5} shadow="md" borderWidth="1px" borderRadius="md">
