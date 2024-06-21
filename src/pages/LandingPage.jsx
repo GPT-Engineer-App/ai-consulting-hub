@@ -2,12 +2,14 @@ import { Container, VStack, Heading, Text, Button, Box, Flex } from "@chakra-ui/
 import { FaRocket, FaLightbulb, FaHandsHelping } from "react-icons/fa";
 
 import Featured from "../components/Featured.jsx";
+import Banner from '../components/Banner.jsx';
 
 const LandingPage = () => {
   return (
     <Container centerContent maxW="container.xl" p={4}>
       
       <Featured />
+      <Banner />
       <Box mt={10} width="100%">
         <Flex justify="space-around" wrap="wrap" spacing={10}>
           <Box textAlign="center" p={5} shadow="md" borderWidth="1px" borderRadius="md">
