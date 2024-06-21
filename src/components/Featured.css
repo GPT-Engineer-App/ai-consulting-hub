@@ -1,10 +1,23 @@
 .featured {
   text-align: center;
-  padding: 50px 20px;
-  background: #e8f5e9;
+  padding: 20px;
+  background: #a8dadc;
+  border-radius: 8px;
+}
+
+.featured h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.featured .logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 .featured .logos img {
   max-width: 100px;
-  margin: 0 20px;
+  margin: 0 10px;
 }
